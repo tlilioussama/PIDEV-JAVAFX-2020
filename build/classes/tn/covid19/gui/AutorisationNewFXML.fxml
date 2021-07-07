@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.covid19.gui.AutorisationNewFXMLController">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="333.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/g.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="423.0" layoutY="37.0" prefHeight="45.0" prefWidth="370.0" text="Bienvenue sur notre application">
+         <font>
+            <Font name="MS Outlook" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="5.0" layoutY="110.0" prefHeight="535.0" prefWidth="840.0">
+         <children>
+            <Pane layoutX="5.0" layoutY="5.0" prefHeight="50.0" prefWidth="830.0" style="-fx-background-color: #EEE8AA; -fx-background-radius: 10;">
+               <children>
+                  <Label layoutX="15.0" layoutY="7.0" prefHeight="30.0" prefWidth="250.0" text="Autorisation du circulation : " textFill="BLUE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnDemanderAuto" layoutX="275.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #EEE8AA;" text="Demander autorisation" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnGestionAuto" layoutX="483.0" layoutY="7.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #EEE8AA;" text="Gestion des autorisations" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnRetourAuto" layoutX="710.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: #EEE8AA;" text="&lt; Retour" textFill="BLUE" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="paneDemanderAuto" layoutX="6.0" layoutY="63.0" prefHeight="460.0" prefWidth="831.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10; -fx-border-width: 2;">
+               <children>
+                  <TextField fx:id="textfieldCin1" layoutX="150.0" layoutY="14.0" prefWidth="200.0" />
+                  <TextField fx:id="textfieldNom1" layoutX="150.0" layoutY="64.0" prefWidth="200.0" />
+                  <TextField fx:id="textfieldAdresse1" layoutX="150.0" layoutY="111.0" prefWidth="200.0" />
+                  <DatePicker fx:id="datepickerDebut1" layoutX="150.0" layoutY="165.0" prefWidth="200.0" promptText="Selectionner date">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </DatePicker>
+                  <DatePicker fx:id="datepickerFin1" layoutX="538.0" layoutY="162.0" prefWidth="200.0" promptText="Selectionner date">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </DatePicker>
+                  <Button fx:id="btnenregistrer1" layoutX="596.0" layoutY="399.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="187.0" style="-fx-background-color: #2196f3;" text="Enregistrer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <CheckBox fx:id="checkbox11" layoutX="5.0" layoutY="224.0" mnemonicParsing="false" text="Déplacements brefs , dans la limite dune heure quotidienne et dans un rayon maximal dun kilomètre autour du domicile.">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="checkbox21" layoutX="5.0" layoutY="259.0" mnemonicParsing="false" text="Déplacements pour motif familial impérieux, pour l’assistance aux personnes vulnérables ou la garde d’enfants.">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="checkbox31" layoutX="5.0" layoutY="292.0" mnemonicParsing="false" text="Déplacements pour effectuer des achats de fournitures nécessaires .">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="checkbox41" layoutX="5.0" layoutY="322.0" mnemonicParsing="false" text="Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle.">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="checkbox51" layoutX="5.0" layoutY="357.0" mnemonicParsing="false" text="Consultations et soins ne pouvant être assurés à distance et ne pouvant être différés.">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <Label layoutX="65.0" layoutY="16.0" text="CIN :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="65.0" layoutY="66.0" text="Nom :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="116.0" text="Adresse :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="166.0" text="Date début :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="460.0" layoutY="66.0" text="Prenom :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="470.0" layoutY="116.0" text="Ville :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="460.0" layoutY="166.0" text="Date fin :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textfieldPrenom1" layoutX="550.0" layoutY="62.0" prefWidth="200.0" />
+                  <TextField fx:id="textfieldVille1" layoutX="550.0" layoutY="113.0" prefWidth="200.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneGestionAuto" layoutX="10.0" layoutY="64.0" prefHeight="460.0" prefWidth="820.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10; -fx-border-width: 2;">
+               <children>
+                  <TextField layoutX="150.0" layoutY="346.0" prefWidth="200.0" />
+                  <TextField layoutX="150.0" layoutY="380.0" prefWidth="200.0" />
+                  <TextField layoutX="150.0" layoutY="412.0" prefWidth="200.0" />
+                  <TextArea layoutX="374.0" layoutY="345.0" prefHeight="93.0" prefWidth="425.0" />
+                  <Button layoutX="690.0" layoutY="304.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="95.0" style="-fx-border-color: #ff0000;" text="Supprimer">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnModifierAutorisation1" layoutX="564.0" layoutY="302.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="95.0" style="-fx-border-color: #0000ff;" text="Modifier">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnrechercherautorisation1" layoutX="27.0" layoutY="304.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="95.0" style="-fx-border-color: #00ff00;" text="Rechercher">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TableView fx:id="tableliste2" layoutX="17.0" layoutY="9.0" prefHeight="287.0" prefWidth="785.0">
+                    <columns>
+                      <TableColumn fx:id="tabdatedebut1" prefWidth="162.99999237060547" text="Date debut Autorisation" />
+                      <TableColumn fx:id="tabdatefin1" prefWidth="130.66665649414062" text="Date fin Autorisation" />
+                        <TableColumn fx:id="tabmotif1" prefWidth="490.3333435058594" text="Motif Autorisation" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="paneModificationAuto" layoutX="17.0" layoutY="70.0" prefHeight="305.0" prefWidth="808.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10;">
+               <children>
+                  <CheckBox layoutX="46.0" layoutY="39.0" mnemonicParsing="false" text="Déplacements brefs , dans la limite dune heure quotidienne et dans un rayon maximal dun kilomètre autour du domicile.">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="46.0" layoutY="72.0" mnemonicParsing="false" text="Déplacements pour motif familial impérieux, pour l’assistance aux personnes vulnérables ou la garde d’enfants.">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="46.0" layoutY="103.0" mnemonicParsing="false" text="Déplacements pour effectuer des achats de fournitures nécessaires .">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="46.0" layoutY="139.0" mnemonicParsing="false" text="Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle.">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="46.0" layoutY="172.0" mnemonicParsing="false" text="Consultations et soins ne pouvant être assurés à distance et ne pouvant être différés.">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </CheckBox>
+                  <DatePicker layoutX="459.0" layoutY="219.0" prefWidth="200.0" promptText="Selectionner date">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </DatePicker>
+                  <DatePicker layoutX="125.0" layoutY="218.0" prefWidth="200.0" promptText="Selectionner date">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </DatePicker>
+                  <Label layoutX="19.0" layoutY="6.0" text="Selectionner votre choix de modification :" textFill="BLUE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="545.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="218.0" style="-fx-background-color: #2196f3;" text="Confirmer la modification" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="31.0" layoutY="222.0" text="Date debut :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="361.0" layoutY="222.0" text="Date fin :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="paneVideAuto" layoutX="3.0" layoutY="60.0" prefHeight="470.0" prefWidth="835.0" style="-fx-background-color: #f5f5f5;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

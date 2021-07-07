@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.covid19.gui.DemDonFXMLController">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="333.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/g.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="430.0" layoutY="55.0" text="Bienvenue sur notre application">
+         <font>
+            <Font name="MS Outlook" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="5.0" layoutY="110.0" prefHeight="535.0" prefWidth="840.0">
+         <children>
+            <Pane layoutX="5.0" layoutY="5.0" prefHeight="50.0" prefWidth="830.0" style="-fx-background-color: #EEE8AA; -fx-background-radius: 10;">
+               <children>
+                  <Label layoutX="9.0" layoutY="10.0" prefHeight="30.0" prefWidth="188.0" text="Don et demande : " textFill="BLUE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnFaireDon" layoutX="206.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #EEE8AA;" text="Faire don" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnAfficherDon" layoutX="301.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: #EEE8AA;" text="Afficher don" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnDemandeAide" layoutX="424.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: #EEE8AA;" text="Demande d'aide" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnAfficherDemande" layoutX="564.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: #EEE8AA;" text="Afficher demande" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnRetourDemDon" layoutX="736.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #EEE8AA;" text="&lt; Retour" textFill="BLUE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="paneFaireDon" layoutX="35.0" layoutY="80.0" prefHeight="401.0" prefWidth="764.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10; -fx-border-width: 2;">
+               <children>
+                  <Label layoutX="33.0" layoutY="10.0" text="Nature Don :" textFill="BLUE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="576.0" layoutY="360.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #2196f3; -fx-background-radius: 10;" text="Valider" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="31.0" layoutY="199.0" text="Description Don :" textFill="BLUE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <CheckBox layoutX="70.0" layoutY="79.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="251.0" text="Produits alimentaires">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="70.0" layoutY="42.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="251.0" text="Medicaments">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="70.0" layoutY="155.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="251.0" text="Argents">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="70.0" layoutY="117.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="251.0" text="Service">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="307.0" layoutY="161.0" mnemonicParsing="false" text="Cheque">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="213.0" layoutY="163.0" mnemonicParsing="false" text="Espece">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </CheckBox>
+                  <TextArea layoutX="83.0" layoutY="226.0" prefHeight="124.0" prefWidth="615.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneDemandeAide" layoutX="45.0" layoutY="90.0" prefHeight="401.0" prefWidth="764.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10; -fx-border-width: 2;">
+               <children>
+                  <Label layoutX="33.0" layoutY="10.0" text="Service" textFill="BLUE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="576.0" layoutY="360.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #2196f3; -fx-background-radius: 10;" text="Valider" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="31.0" layoutY="199.0" text="Description de demande :" textFill="BLUE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <CheckBox layoutX="70.0" layoutY="79.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="251.0" text="Produits alimentaires">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="70.0" layoutY="42.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="251.0" text="Medicaments">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="70.0" layoutY="155.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="251.0" text="Argents">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="70.0" layoutY="117.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="251.0" text="Service">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <TextArea layoutX="83.0" layoutY="226.0" prefHeight="124.0" prefWidth="615.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneAfficherDemande" layoutX="20.0" layoutY="75.0" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10; -fx-border-width: 2;">
+               <children>
+                  <Label layoutX="620.0" layoutY="33.0" text="Date ">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="608.0" layoutY="406.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="173.0" style="-fx-background-color: #2196f3; -fx-background-radius: 10;" text="Valider votre demande" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="620.0" layoutY="112.0" text="Nature demande">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="14.0" layoutY="11.0" prefHeight="359.0" prefWidth="576.0">
+                     <columns>
+                        <TableColumn prefWidth="95.0" text="Date demande" />
+                        <TableColumn prefWidth="171.0" text="Description demande" />
+                        <TableColumn prefWidth="179.3333740234375" text="Nature de demande" />
+                        <TableColumn prefWidth="129.6666259765625" text="Action" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="31.0" layoutY="391.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" style="-fx-border-color: #0000ff;" text="Modifier">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="124.0" layoutY="391.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="101.0" style="-fx-border-color: #ff0000;" text="Supprimer">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="483.0" layoutY="406.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="101.0" text="Annuler">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="620.0" layoutY="209.0" prefHeight="0.0" prefWidth="109.0" text="Description demande">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="620.0" layoutY="232.0" prefHeight="25.0" prefWidth="170.0" />
+                  <TextField layoutX="620.0" layoutY="55.0" prefHeight="25.0" prefWidth="170.0" />
+                  <TextField layoutX="620.0" layoutY="134.0" prefHeight="25.0" prefWidth="170.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneAfficherDon" layoutX="20.0" layoutY="70.0" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10; -fx-border-width: 2;">
+               <children>
+                  <Label layoutX="620.0" layoutY="33.0" text="Date ">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="608.0" layoutY="406.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="173.0" style="-fx-background-color: #2196f3; -fx-background-radius: 10;" text="Valider " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="620.0" layoutY="112.0" text="Nature demande">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="14.0" layoutY="11.0" prefHeight="359.0" prefWidth="576.0">
+                     <columns>
+                        <TableColumn prefWidth="95.0" text="Date don" />
+                        <TableColumn prefWidth="171.0" text="Description don" />
+                        <TableColumn prefWidth="179.3333740234375" text="Nature don" />
+                        <TableColumn prefWidth="129.6666259765625" text="Action" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="31.0" layoutY="391.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" style="-fx-border-color: #0000ff;" text="Modifier">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="124.0" layoutY="391.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="101.0" style="-fx-border-color: #ff0000;" text="Supprimer">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="483.0" layoutY="406.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="101.0" text="Annuler">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="620.0" layoutY="209.0" prefHeight="0.0" prefWidth="109.0" text="Description demande">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="620.0" layoutY="232.0" prefHeight="25.0" prefWidth="170.0" />
+                  <TextField layoutX="620.0" layoutY="55.0" prefHeight="25.0" prefWidth="170.0" />
+                  <TextField layoutX="620.0" layoutY="134.0" prefHeight="25.0" prefWidth="170.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneVideDon" layoutX="5.0" layoutY="65.0" prefHeight="461.0" prefWidth="823.0" style="-fx-background-color: #f5f5f5;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

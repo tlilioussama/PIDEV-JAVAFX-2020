@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: #F5F5F5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.covid19.gui.AdminFXMLController">
+   <children>
+      <Pane fx:id="paneSupprimerLabo" layoutX="170.0" layoutY="165.0" prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10;">
+         <children>
+            <Label layoutX="10.0" layoutY="12.0" text="Nom laboratoire :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfnomlaboSup" layoutX="135.0" layoutY="10.0" prefHeight="20.0" prefWidth="200.0" />
+            <Button fx:id="btnSupLabo" layoutX="350.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #fff; -fx-border-color: #ff0000;" text="Supprimer">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneAjouterLabo" layoutX="170.0" layoutY="165.0" prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10;">
+         <children>
+            <Label layoutX="10.0" layoutY="12.0" text="Nom laboratoire :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfnomlabo" layoutX="135.0" layoutY="10.0" prefHeight="20.0" prefWidth="200.0" />
+            <Button fx:id="btnajouterlabo" layoutX="350.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #fff; -fx-border-color: #4169E1;" text="Ajouter">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="430.0" layoutY="40.0" prefHeight="30.0" prefWidth="250.0" text="Gestion des taches" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="100.0" fitWidth="333.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/g.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="paneAabdeAziz" layoutX="100.0" layoutY="115.0" prefHeight="40.0" prefWidth="730.0" style="-fx-background-color: #4169E1; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="20.0" layoutY="5.0" prefHeight="30.0" prefWidth="197.0" text="Partie AbdelAziz :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="paneHabib" layoutX="100.0" layoutY="115.0" prefHeight="40.0" prefWidth="730.0" style="-fx-background-color: #4169E1; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="20.0" layoutY="5.0" prefHeight="30.0" prefWidth="197.0" text="Partie Habib :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="paneCINSupp" layoutX="170.0" layoutY="165.0" prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #f5f5f5; -fx-border-color: #dcdcdc; -fx-background-radius: 10; -fx-border-radius: 10;">
+         <children>
+            <Label layoutX="10.0" layoutY="12.0" prefHeight="20.0" prefWidth="40.0" text="CIN :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbSuppErreur" layoutX="280.0" layoutY="12.0" prefHeight="20.0" prefWidth="250.0" textFill="RED" underline="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCINSupp" layoutX="50.0" layoutY="10.0" prefHeight="20.0" prefWidth="150.0" />
+            <Button fx:id="btnSuppResult" layoutX="210.0" layoutY="10.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="60.0" style="-fx-background-color: #fff; -fx-border-color: #4169E1;" text="Afficher">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneAffichResult" layoutX="170.0" layoutY="220.0" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10;">
+         <children>
+            <Label fx:id="labelNomAffich" layoutX="30.0" layoutY="30.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPrenomAffich" layoutX="30.0" layoutY="60.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAdresseAffich" layoutX="30.0" layoutY="90.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVilleAffich" layoutX="30.0" layoutY="120.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAgeAffich" layoutX="30.0" layoutY="150.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelTelephoneAffich" layoutX="30.0" layoutY="180.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelEmailAffich" layoutX="30.0" layoutY="210.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelLoginAffich" layoutX="30.0" layoutY="240.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelMotDePasseAffich" layoutX="30.0" layoutY="270.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbPrenomAffich" layoutX="140.0" layoutY="60.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbAdresseAffich" layoutX="140.0" layoutY="90.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbVilleAffich" layoutX="140.0" layoutY="120.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbAgeAffich" layoutX="140.0" layoutY="150.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbTelephoneAffich" layoutX="140.0" layoutY="180.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbEmailAffich" layoutX="140.0" layoutY="210.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbLoginAffich" layoutX="140.0" layoutY="240.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbMotDePasseAffich" layoutX="140.0" layoutY="270.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbNomAffich" layoutX="140.0" layoutY="30.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneRim" layoutX="100.0" layoutY="115.0" prefHeight="40.0" prefWidth="730.0" style="-fx-background-color: #4169E1; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="20.0" layoutY="5.0" prefHeight="30.0" prefWidth="197.0" text="Partie Rim" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="paneSuppResult" layoutX="170.0" layoutY="220.0" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10;">
+         <children>
+            <Label fx:id="labelNomSupp" layoutX="30.0" layoutY="30.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPrenomSupp" layoutX="30.0" layoutY="60.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAdresseSupp" layoutX="30.0" layoutY="90.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVilleSupp" layoutX="30.0" layoutY="120.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAgeSupp" layoutX="30.0" layoutY="150.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelTelephoneSupp" layoutX="30.0" layoutY="180.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelEmailSupp" layoutX="30.0" layoutY="210.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelLoginSupp" layoutX="30.0" layoutY="240.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelMotDePasseSupp" layoutX="30.0" layoutY="270.0" prefHeight="30.0" prefWidth="100.0" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbNomSupp" layoutX="140.0" layoutY="30.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbPrenomSupp" layoutX="140.0" layoutY="60.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbAdresseSupp" layoutX="140.0" layoutY="90.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbVilleSupp" layoutX="140.0" layoutY="120.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbAgeSupp" layoutX="140.0" layoutY="150.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbTelephoneSupp" layoutX="140.0" layoutY="180.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbEmailSupp" layoutX="140.0" layoutY="210.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbLoginSupp" layoutX="140.0" layoutY="240.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbMotDePasseSupp" layoutX="140.0" layoutY="270.0" prefHeight="30.0" prefWidth="350.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSuppConfirm" layoutX="360.0" layoutY="319.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #6495ED; -fx-background-radius: 90;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneGestUtilisateur" layoutX="100.0" layoutY="115.0" prefHeight="40.0" prefWidth="730.0" style="-fx-background-color: #4169E1; -fx-background-radius: 10;">
+         <children>
+            <Button fx:id="btnAffichUtilisateur" layoutX="220.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #4169E1;" text="Afficher Utilisateur" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnSuppUtilisateur" layoutX="370.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #4169E1;" text="Supprimer Utilisateur" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnListeUtilisateur" layoutX="530.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #4169E1;" text="Liste Utilisateurs" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="20.0" layoutY="3.0" prefHeight="30.0" prefWidth="197.0" text="Gestion d'utilisateur :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneCINAff" layoutX="170.0" layoutY="165.0" prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10;">
+         <children>
+            <Label layoutX="10.0" layoutY="12.0" prefHeight="20.0" prefWidth="40.0" text="CIN :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCINAfficher" layoutX="50.0" layoutY="10.0" prefHeight="20.0" prefWidth="150.0" />
+            <Button fx:id="btnAffichResult" layoutX="210.0" layoutY="10.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="60.0" style="-fx-background-color: #fff; -fx-border-color: #4169E1;" text="Afficher">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="lbAfficheErreur" layoutX="280.0" layoutY="12.0" prefHeight="20.0" prefWidth="250.0" textFill="RED" underline="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneOussama" layoutX="100.0" layoutY="115.0" prefHeight="40.0" prefWidth="730.0" style="-fx-background-color: #4169E1; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="20.0" layoutY="5.0" prefHeight="30.0" prefWidth="197.0" text="Partie laboratoire :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAjouterLabo" layoutX="220.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #4169E1;" text="Ajouter labo" textFill="WHITE" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAfficherLabo" layoutX="530.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #4169E1;" text="Afficher labo" textFill="WHITE" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSupprimerLabo" layoutX="370.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #4169E1;" text="Supprimer labo" textFill="WHITE" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Pane fx:id="paneMenu" layoutX="10.0" layoutY="170.0" prefHeight="350.0" prefWidth="220.0" style="-fx-background-color: #fff; -fx-border-color: #4169E1; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;">
+         <children>
+            <Button fx:id="btnRim" layoutX="2.0" layoutY="140.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: #fff;" text="Rim " textFill="BLUE" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnAbdelAziz" layoutX="2.0" layoutY="180.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: #fff;" text="AbdelAziz" textFill="BLUE" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnGestUtilisateur" layoutX="2.0" layoutY="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: #fff;" text="Gestion d'utilisateur" textFill="BLUE" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnOussama" layoutX="2.0" layoutY="100.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: #fff;" text="Gestion laboratoire" textFill="BLUE" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnHabib" layoutX="2.0" layoutY="60.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: #fff;" text="Habib" textFill="BLUE" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnPageApp" layoutX="2.0" layoutY="220.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: #fff;" text="Page app" textFill="BLUE" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneListeUtilisateur" layoutX="120.0" layoutY="165.0" prefHeight="471.0" prefWidth="700.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-border-color: #dcdcdc; -fx-border-radius: 10;">
+         <children>
+            <TableView fx:id="table3" layoutX="10.0" layoutY="10.0" prefHeight="455.0" prefWidth="680.0" style="-fx-background-color: #f5f5f5;">
+              <columns>
+                <TableColumn fx:id="cin3" editable="false" prefWidth="89.66667175292969" style="-fx-background-color: #f5f5f5;" text="CIN" />
+                <TableColumn fx:id="nom3" prefWidth="85.33331298828125" style="-fx-background-color: #f5f5f5;" text="Nom" />
+                  <TableColumn fx:id="prenom3" prefWidth="85.66668701171875" style="-fx-background-color: #f5f5f5;" text="Prenom" />
+                  <TableColumn fx:id="adresse3" prefWidth="81.33334350585938" style="-fx-background-color: #f5f5f5;" text="Adresse" />
+                  <TableColumn fx:id="telephone3" prefWidth="88.33331298828125" style="-fx-background-color: #f5f5f5;" text="Téléphone" />
+                  <TableColumn fx:id="email3" prefWidth="179.66668701171875" style="-fx-background-color: #f5f5f5;" text="Email" />
+                  <TableColumn fx:id="age3" prefWidth="70.33331298828125" style="-fx-background-color: #f5f5f5;" text="Age" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneAfficherLabo" layoutX="170.0" layoutY="165.0" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #f5f5f5;">
+         <children>
+            <TableView fx:id="tableAfficher" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #f5f5f5;">
+              <columns>
+                <TableColumn fx:id="colid" prefWidth="75.0" style="-fx-background-color: #f5f5f5;" text="ID" />
+                <TableColumn fx:id="colnom" prefWidth="239.66665649414062" style="-fx-background-color: #f5f5f5;" text="NOM LABO" />
+                  <TableColumn fx:id="colNbrtotal" prefWidth="119.33334350585938" style="-fx-background-color: #f5f5f5;" text="NBR Test Total" />
+                  <TableColumn fx:id="colpos" prefWidth="115.0" style="-fx-background-color: #f5f5f5;" text="NBR test POSitive" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneMenuVide" layoutX="5.0" layoutY="110.0" prefHeight="535.0" prefWidth="840.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/menu.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="50.0" layoutY="30.0" text="Menu" textFill="ROYALBLUE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnMenu" mnemonicParsing="false" opacity="0.0" prefHeight="50.0" prefWidth="50.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
